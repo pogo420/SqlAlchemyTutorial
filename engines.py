@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, text
 
 engine = create_engine("sqlite:///:memory:")  # engine for info about data bases and connectors(dbapi)
 connection = engine.connect()  # creating connection, can be used with context manager.
+# SQL Alchemy provides us API for smooth transactions
 
 # creating table
 create_table = text("CREATE TABLE some_table (x int, y int)")
